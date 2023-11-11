@@ -1,0 +1,22 @@
+.container-listhotels{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+  line-height: 1.8;
+}
+
+.container-listhotels span {
+  font-size: 0.9rem;
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+.container-listhotels span:first-child{
+  background-color: #0d00c2;
+  padding: 2px 8px;
+  color: #fff;
+}
+
+.container-listhotels img  {
+  margin-top: 28px;
+}

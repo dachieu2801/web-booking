@@ -1,0 +1,18 @@
+.img-listcity {
+  height: 340px;
+  border-radius: 4%;
+}
+
+.listcity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin: 36px 0 40px 0;
+}
+
+.infor-city {
+  position: relative;
+  top: 70%;
+  left: 6%;
+  color: #ffffff;
+}

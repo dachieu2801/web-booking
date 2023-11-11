@@ -1,0 +1,55 @@
+.container-SearchListItem {
+  display: grid;
+  grid-template-columns: 3.2fr 6.5fr 2.5fr;
+  gap: 18px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  line-height: 1.9rem;
+}
+
+.container-SearchListItem h2{
+  color: #0d69bd;
+  margin-bottom: 8px;
+
+}
+
+.tag-SearchListItem {
+  background-color: rgb(31, 152, 9);
+  padding: 3px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container-SearchListItem .color-blue {
+  color: rgb(5, 144, 26);
+}
+
+.rate-SearchListItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate-SearchListItem  p {
+  background-color: #0d00c2;
+  padding: 0 4px;
+  color: #fff;
+}
+
+.container-SearchListItem h3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-align: end;
+  margin-top: 90px;
+  margin-bottom: 5px;
+}
+
+.container-SearchListItem button {
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 5px;
+  background-color: #0d69bd;
+  color: #fff;
+  cursor: pointer;
+}

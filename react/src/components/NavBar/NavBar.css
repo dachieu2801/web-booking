@@ -1,0 +1,42 @@
+
+.section-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.section-nav1{
+  background-color: #0d00c2;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 160px;
+  color: #fff;
+}
+
+.section-nav1 button {
+  padding: 4px;
+  color: #0d00c2;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.section-nav button {
+  padding: 4px;
+  color: #0d00c2;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.navbar {
+  display: inline-block;
+  margin-right: 48px;
+}
+
+.navbar i {
+  margin-right: 12px;
+}
+
+.navbar.active {
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 18px;
+}

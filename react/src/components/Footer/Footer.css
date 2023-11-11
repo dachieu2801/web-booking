@@ -1,0 +1,9 @@
+.container-footer{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  line-height: 2;
+  font-size: 0.8rem;
+  color: #0d28bd;
+  margin-top: 10px;
+  font-weight: 500;
+}

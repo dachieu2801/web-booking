@@ -1,0 +1,15 @@
+.container-typehotels {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.container-typehotels img {
+  margin-top: 28px;
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+}
+
+.container-typehotels h4 {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,24 @@
+.container-form-registor {
+  font-size: 1rem;
+  background-color: #0d00c2;
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.container-form-registor h1 {
+  padding-top: 36px;
+  padding-bottom: 15px;
+}
+
+.container-form-registor input,
+.container-form-registor button {
+  margin: 20px 8px 40px 0;
+  padding: 12px 6px;
+  border-radius: 8px;
+}
+.container-form-registor button{
+  color: #fff;
+  background-color: #0099ff;
+  cursor: pointer;
+}
