@@ -3,6 +3,10 @@ Introduction
  - The project can manage hotel, manage user, manage room, manage type, manage area, view transactions, login and logout.
  - Get hotels, rooms information and order it 
 
+# Build with
+
+  reactjs
+  bootstrap
 
 # Getting Started 
 

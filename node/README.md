@@ -3,6 +3,12 @@ Introduction
  - Project provide data for FE and process logic.
  - The project can provide authentication by token, provide hotel data, provide room data,provide transaction data, provide type data, provide area data.
 
+# Build with
+
+  nodejs
+
+# Getting Started 
+
 Technology
 
  - cors version ^2.8.5 (https://www.npmjs.com/package/cors).
@@ -11,7 +17,7 @@ Technology
  - mongoose version ^7.6.3 (https://www.npmjs.com/package//mongoose).
  - multer version ^1.4.5-lts.1 (https://www.npmjs.com/package/multer).
  - nodemon version ^3.0.1 (https://www.npmjs.com/package//nodemon).
-
+ ...
 Database
 
  - mongodb (https://www.mongodb.com/)
