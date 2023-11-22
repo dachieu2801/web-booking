@@ -1,10 +1,37 @@
-# Getting Started with Create React App
+Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - The project can manage hotel, manage user, manage room, manage type, manage area, view transactions, login and logout.
+ - Get hotels, rooms information and order it 
 
-## Available Scripts
 
-In the project directory, you can run:
+# Getting Started 
+
+Technology
+
+ - react bootstrap version ^5.3.0 (https://react-bootstrap.netlify.app/docs/getting-started/introduction/).
+ - axios version ^1.5.1 (https://www.npmjs.com/package/axios).
+ - react-redux: version ^8.1.3 (https://react-redux.js.org/).
+ - reduxjs/toolkit version ^1.9.7 (https://redux-toolkit.js.org/).
+ - date-fns version ^2.30.0 (https://www.npmjs.com/package/date-fns).
+
+Before you continue, ensure you meet the following requirements:
+
+ - You have installed the latest version of nodejs (https://nodejs.org/en/download/).
+ - You have installed the latest version of npm (command: 'npm install download).
+ - You have installed of VSCode (https://visualstudio.microsoft.com/downloads).
+
+Install
+
+ - Clone project (https://github.com/dachieu2801/web-booking/tree/).
+ - Clone Backend project (https://github.com/dachieu2801/web-booking/tree/main/node).
+ - Clone FrontEnd project for admin (https://github.com/dachieu2801/web-booking/tree/main/react).
+ - Go to configs/axios.js comment line 4 and uncomment line 3.
+ - Open terminal in root folder project and type 'npm i'.
+ - Run project with command 'npm start'.
+
+Contact me:
+
+ - Email: ankhieu322@gmail.com.
 
 ### `npm start`
 
