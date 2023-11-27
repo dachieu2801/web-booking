@@ -53,7 +53,7 @@ function App() {
     setUser('')
   }
 
-  if (user.isAdmin) {
+  if (user && user.isAdmin) {
     return (
       <BrowserRouter>
         <AuthContext.Provider value={[user, setUser]}>
