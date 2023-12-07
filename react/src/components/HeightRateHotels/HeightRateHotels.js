@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './ListHotels.css'
+import URL from '../../url'
 
 
 
@@ -17,7 +18,7 @@ function HeightRateHotels() {
   useEffect(() => {
     async function fetchApi() {
       try {
-        const res = await fetch('http://localhost:5000/hotel/height_rate')
+        const res = await fetch(`${URL}hotel/height_rate`)
         const data = await res.json()
         if (data.message) {
           throw new Error(data.message)

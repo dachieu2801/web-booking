@@ -1,5 +1,7 @@
 import { useState, useContext, useEffect } from "react"
 import { AuthContext } from "../App"
+import URL from '../url'
+
 function Login() {
 
   const [user] = useContext(AuthContext)
@@ -8,7 +10,7 @@ function Login() {
 
   useEffect(() => {
     async function transactionHandle() {
-      const res = await fetch(`http://localhost:5000/transaction/${user.username}`)
+      const res = await fetch(`${URL}transaction/${user.username}`)
 
       const data = await res.json()
       if (data.message === 'Has error') {

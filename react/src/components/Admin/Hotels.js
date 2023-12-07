@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import URL from '../../url'
 
 function Hotels() {
 
@@ -10,7 +11,7 @@ function Hotels() {
 
   useEffect(() => {
     async function hotelsHandle() {
-      const data = await fetch(`http://localhost:5000/admin/hotels/${page}`)
+      const data = await fetch(`${URL}admin/hotels/${page}`)
       const hotelsData = await data.json()
       if (data.message === 'Has error') {
         console.log('err');
@@ -29,7 +30,7 @@ function Hotels() {
     if (confirm) {
 
       try {
-        await fetch(`http://localhost:5000/admin/hotels/delete`, {
+        await fetch(`${URL}admin/hotels/delete`, {
           method: 'DELETE',
           body: JSON.stringify({
             _id

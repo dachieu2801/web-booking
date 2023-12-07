@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import URL from '../url'
 
 function Register() {
   const navigate = useNavigate()
@@ -27,7 +28,7 @@ function Register() {
       setNumberMess('')
       setEmailMess('')
       setUsernameMess('')
-      const res = await fetch('http://localhost:5000/user/create-account', {
+      const res = await fetch(`${URL}user/create-account`, {
         method: 'POST',
         body: JSON.stringify({
           username,

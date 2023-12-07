@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function main() {
   try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/Assign2');
+    await mongoose.connect('mongodb+srv://ankhieu322:j5GERTe5oUWil3Jn@cluster0.5euclk4.mongodb.net/Assign2?retryWrites=true&w=majority');
     console.log('success');
 
   } catch (err) {

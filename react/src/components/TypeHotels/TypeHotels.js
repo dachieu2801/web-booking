@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './TypeHotels.css'
 import { useNavigate } from "react-router-dom";
+import URL from '../../url'
 
 function TypeHotels() {
   const navigate = useNavigate()
@@ -10,7 +11,7 @@ function TypeHotels() {
   useEffect(() => {
     async function fetchApi() {
       try {
-        const res = await fetch('http://localhost:5000/hotel')
+        const res = await fetch(`${URL}hotel`)
         const data = await res.json()
         if (data.message) {
           throw new Error(data.message)

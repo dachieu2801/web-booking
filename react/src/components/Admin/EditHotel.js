@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
+import URL from '../../url'
 
 function NewHotel() {
   const { id } = useParams()
@@ -22,7 +22,7 @@ function NewHotel() {
 
   useEffect(() => {
     async function fetchApi() {
-      const res = await fetch(`http://localhost:5000/admin/rooms/1`)
+      const res = await fetch(`${URL}admin/rooms/1`)
       const data = await res.json()
       if (data.message === 'Has error') {
         console.log('err');
@@ -34,7 +34,7 @@ function NewHotel() {
   }, [])
   useEffect(() => {
     async function fetchApi() {
-      const res = await fetch(`http://localhost:5000/admin/hotels/edit/${id}`)
+      const res = await fetch(`${URL}admin/hotels/edit/${id}`)
       const data = await res.json()
       if (data.message === 'Has error') {
         console.log('err');
@@ -87,7 +87,7 @@ function NewHotel() {
     try {
       setErr('')
       if (name && type && city && address && distance && title && photos && desc && cheapestPrice) {
-        const res = await fetch(`http://localhost:5000/admin/hotels/edit`, {
+        const res = await fetch(`${URL}admin/hotels/edit`, {
           method: 'put',
           body: JSON.stringify({
             _id: hotel._id,

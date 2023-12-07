@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
+import URL from '../../url'
 
 
 function EditRoom() {
@@ -19,7 +19,7 @@ function EditRoom() {
 
   useEffect(() => {
     async function fetchApi() {
-      const res = await fetch(`http://localhost:5000/admin/rooms/edit/${id}`)
+      const res = await fetch(`${URL}admin/rooms/edit/${id}`)
       const data = await res.json()
       if (data.message === 'Has error') {
         console.log('err');
@@ -38,7 +38,7 @@ function EditRoom() {
     try {
       setErr('')
       if (title && desc && price && maxPeople && roomNumbers) {
-        const res = await fetch(`http://localhost:5000/admin/rooms/edit`, {
+        const res = await fetch(`${URL}admin/rooms/edit`, {
           method: 'put',
           body: JSON.stringify({
             _id: id,

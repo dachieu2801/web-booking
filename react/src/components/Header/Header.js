@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import './Header.css'
 import { SearchContext } from "../../App";
 import { DateRange1 } from "../../App";
+import URL from '../../url'
 
 function Header() {
   const navigate = useNavigate()
@@ -40,7 +41,7 @@ function Header() {
 
   async function searchHandle() {
     try {
-      const res = await fetch(`http://localhost:5000/search/`, {
+      const res = await fetch(`${URL}search/`, {
         method: 'post',
         body: JSON.stringify({
           ...search

@@ -6,6 +6,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { AuthContext } from '../../App';
 import Room from './Room'
+import URL from '../../url'
 
 function ContentDetail() {
   const navigate = useNavigate()
@@ -38,7 +39,7 @@ function ContentDetail() {
   useEffect(() => {
     async function fetchApi() {
       try {
-        const res = await fetch(`http://localhost:5000/hotel/${_id}`)
+        const res = await fetch(`${URL}hotel/${_id}`)
         const data = await res.json()
         // console.log(data);
         if (data.message) {
@@ -58,7 +59,7 @@ function ContentDetail() {
 
   useEffect(() => {
     async function fetchRoom() {
-      const res = await fetch('http://localhost:5000/hotel/room', {
+      const res = await fetch('${URL}hotel/room', {
         method: 'POST',
         body: JSON.stringify({
           dateStart,
@@ -122,7 +123,7 @@ function ContentDetail() {
 
     if (fullName.trim() && email.trim() && phoneNumber && cardNumber && room.length > 0 && typePayment) {
       setErr('')
-      const res = await fetch('http://localhost:5000/transaction', {
+      const res = await fetch('${URL}transaction', {
         method: 'POST',
         body: JSON.stringify({
           user: user.username,

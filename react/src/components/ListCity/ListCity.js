@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import URL from '../../url'
+
 import './ListCity.css'
 import { useNavigate } from "react-router-dom";
 function ListCity() {
@@ -8,7 +10,7 @@ function ListCity() {
   useEffect(() => {
     async function fetchApi() {
       try {
-        const res = await fetch('http://localhost:5000/hotel')
+        const res = await fetch(`${URL}hotel`)
         const data = await res.json()
         console.log(data);
         if (data.message) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams, Link } from 'react-router-dom';
+import URL from '../url'
 
 function ViewHotels() {
 
@@ -11,7 +12,7 @@ function ViewHotels() {
   useEffect(() => {
     async function fetchApi() {
       try {
-        const res = await fetch(`http://localhost:5000/hotel?${type}=${serachType}`)
+        const res = await fetch(`${URL}hotel?${type}=${serachType}`)
         const data = await res.json()
         console.log(data);
         if (data.message) {

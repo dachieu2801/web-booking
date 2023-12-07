@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import URL from '../../url'
 
 function Transactions() {
 
@@ -9,8 +10,8 @@ function Transactions() {
 
   useEffect(() => {
     async function transactionHandle() {
-      const res = await fetch(`http://localhost:5000/admin`)
-      const transactionRes = await fetch(`http://localhost:5000/admin/transaction/${page}`)
+      const res = await fetch(`${URL}admin`)
+      const transactionRes = await fetch(`${URL}admin/transaction/${page}`)
       const data = await res.json()
       const transactionData = await transactionRes.json()
       if (data.message === 'Has error') {

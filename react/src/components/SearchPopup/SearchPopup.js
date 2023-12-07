@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { SearchContext } from "../../App";
 import { DataSearch } from "../../App";
+import URL from '../../url'
 
 import DateRanges from '../../components/DateRange/DateRange'
 
@@ -29,7 +30,7 @@ function SearchPopup(props) {
 
   async function searchHandle() {
     try {
-      const res = await fetch(`http://localhost:5000/search/`, {
+      const res = await fetch(`${URL}search/`, {
         method: 'post',
         body: JSON.stringify({
           ...search

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import URL from '../../url'
 
 
 function NewHotel() {
@@ -20,7 +21,7 @@ function NewHotel() {
 
   useEffect(() => {
     async function fetchApi() {
-      const data = await fetch(`http://localhost:5000/admin/rooms/1`)
+      const data = await fetch(`${URL}admin/rooms/1`)
       const roomsData = await data.json()
       if (data.message === 'Has error') {
         console.log('err');
@@ -63,7 +64,7 @@ function NewHotel() {
     try {
       setErr('')
       if (name && type && city && address && distance && title && photos && desc && cheapestPrice) {
-        const res = await fetch(`http://localhost:5000/admin/hotels/create-hotel`, {
+        const res = await fetch(`${URL}admin/hotels/create-hotel`, {
           method: 'post',
           body: JSON.stringify({
             name,

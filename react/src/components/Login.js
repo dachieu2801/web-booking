@@ -1,6 +1,8 @@
 import { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../App"
+import URL from '../url'
+
 function Login() {
   const navigate = useNavigate()
   const [user, setUser] = useContext(AuthContext)
@@ -11,7 +13,7 @@ function Login() {
   async function loginHandle() {
     setErr('')
     if (username.trim() && password.trim()) {
-      const res = await fetch('http://localhost:5000/user/login', {
+      const res = await fetch(`${URL}user/login`, {
         method: 'POST',
         body: JSON.stringify({
           username,

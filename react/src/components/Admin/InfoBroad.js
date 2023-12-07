@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 import Transactions from './Transactions'
+import URL from '../../url'
 
 function InfoBroad() {
 
@@ -8,7 +9,7 @@ function InfoBroad() {
 
   useEffect(() => {
     async function transactionHandle() {
-      const res = await fetch(`http://localhost:5000/admin`)
+      const res = await fetch(`${URL}admin`)
       const data = await res.json()
       if (data.message === 'Has error') {
         console.log('err');
